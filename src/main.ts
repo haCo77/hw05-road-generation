@@ -426,7 +426,7 @@ function main() {
   // Add controls to the gui
   const gui = new DAT.GUI();
   gui.add(controls, 'Map', ['Terrain Elevation', 'Population Density', 'Overlapping']);
-  gui.add(controls, 'Water Level', 0, 1);
+  gui.add(controls, 'Water Level', 0, 0.5);
   gui.add(controls, 'Roads Density', 0.2, 0.99);
   gui.add(controls, 'Grid Size', 0.5, 2.0);
 
