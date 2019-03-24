@@ -6113,6 +6113,11 @@ function findNearest(pos, ignoreType) {
         if (ignoreType == types[i]) {
             continue;
         }
+        if ((roads[i][0] - pos[0]) * (roads[i][0] - pos[0]) + (roads[i][1] - pos[1]) * (roads[i][1] - pos[1]) > 9.0 * cellW * cellW) {
+            if (types[i] == 1) {
+                continue;
+            }
+        }
         if (types[i] == 1 && flag) {
             flag = false;
             if (tmin <= cellW / 2.0) {
